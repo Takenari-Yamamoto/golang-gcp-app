@@ -1,0 +1,12 @@
+name: Deploy to sample-pro-395702 Cloud Run
+
+on:
+  push:
+    branches:
+      - go-gcp-tf-github_actions
+
+jobs:
+  deploy-to-sample-pro-395702-cloud-run:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Deploying to sample-pro-395702 Cloud Run"
