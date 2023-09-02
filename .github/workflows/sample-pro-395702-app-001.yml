@@ -9,6 +9,7 @@ env:
   GCP_PROJECT_ID: "sample-pro-395702"
   GCP_REGION: "asia-northeast1"
   IMAGE_NAME: asia-northeast1-docker.pkg.dev/sample-pro-395702/artifacts/sample-app-001-server
+  SERVICE_NAME: sample-app-001
 
 jobs:
   deploy-to-sample-pro-395702-cloud-run:
@@ -38,7 +39,7 @@ jobs:
       - name: Deploy to Cloud Run
         run: |
           TAG=$(echo $GITHUB_SHA | head -c7)
-          gcloud run deploy web-push-demo \
+          gcloud run deploy ${SERVICE_NAME} \
             --image ${IMAGE_NAME}:${TAG} \
             --platform managed \
             --region ${GCP_REGION} \
