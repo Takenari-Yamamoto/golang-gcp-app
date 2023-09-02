@@ -37,6 +37,7 @@ jobs:
         uses: hashicorp/setup-terraform@v1
 
       - name: Terraform Init
+        working-directory: infrastracture/terraform/src/enviroments/sample-pro-395702/app-001
         run: terraform init
 
       - name: Terraform Plan
