@@ -40,9 +40,11 @@ jobs:
         run: terraform init
 
       - name: Terraform Plan
+        working-directory: infrastracture/terraform/src/enviroments/sample-pro-395702/app-001
         run: terraform plan
 
       - name: Terraform Apply
+        working-directory: infrastracture/terraform/src/enviroments/sample-pro-395702/app-001
         run: terraform apply -auto-approve
 
       # - name: Deploy to Cloud Run
