@@ -10,7 +10,7 @@ resource "google_cloud_run_service" "sample-app-001" {
   template {
     spec {
       containers {
-        image = ""
+        image = "asia.gcr.io/${var.project_id}/sample-app-001:latest"
 
         env {
           name  = "HOGEHOGE"
