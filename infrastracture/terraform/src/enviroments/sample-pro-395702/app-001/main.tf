@@ -10,9 +10,20 @@ resource "google_cloud_run_service" "sample-app-001" {
   template {
     spec {
       containers {
-        image = "asia.gcr.io/${var.project_id}/sample-app-001:latest"
+        image = ""
+
+        env {
+          name  = "HOGEHOGE"
+          value = "おりゃあaaa"
+        }
       }
     }
+  }
+
+  lifecycle {
+    ignore_changes = [
+      template[0].spec[0].containers[0].image,
+    ]
   }
 
   traffic {
