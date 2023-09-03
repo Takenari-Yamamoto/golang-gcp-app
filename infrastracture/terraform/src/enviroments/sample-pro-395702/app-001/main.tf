@@ -14,7 +14,7 @@ resource "google_cloud_run_service" "sample-app-001" {
 
         env {
           name  = "HOGEHOGE"
-          value = "お"
+          value = "おおお"
         }
       }
     }
