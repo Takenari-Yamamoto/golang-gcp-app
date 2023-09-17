@@ -1,5 +1,3 @@
-module github/Takenari-Yamamoto/golang-gcp-app
+module github/Takenari-Yamamoto/clean_architecture
 
 go 1.20
-
-require github.com/gorilla/mux v1.8.0 // indirect
